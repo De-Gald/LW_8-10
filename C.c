@@ -20,10 +20,10 @@ int main() {
         printf("%s\n", result);
         close(fd);
 
-//         fd = open("C >> A", O_RDONLY);
-//         read(fd, &result, sizeof result);
-//         printf("%s\n", result);
-//         close(fd);
+        fd = open("C >> A", O_RDONLY);
+        read(fd, &result, sizeof result);
+        printf("%s\n", result);
+        close(fd);
 
         i--;
     }
