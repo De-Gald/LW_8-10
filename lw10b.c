@@ -12,7 +12,9 @@ int groups_performance[7][5] = {{3, 5, 5, 5, 3},
                                 {4, 5, 5, 5, 3}};
 
 void *average_grade(void *arg) {
-    int group_number = (int) arg;
+    int * number = (int *) arg;
+//    int group_number = (int) arg;
+    int group_number = number;
     int count = 0;
     float grades_sum = 0;
     for (int i = 0; i < number_of_students; i++){
@@ -41,7 +43,7 @@ void *full_average(void *arg) {
 int main() {
     for (int i = 0; i < number_of_groups; i++) {
         pthread_t thread_id;
-        pthread_create(&thread_id, NULL, average_grade, i);
+        pthread_create(&thread_id, NULL, average_grade, (void *) i);
         pthread_cancel(thread_id);
     }
 
