@@ -39,16 +39,15 @@ void *full_average(void *arg) {
 }
 
 int main() {
-    pthread_t thread_id;
     for (int i = 0; i < number_of_groups; i++) {
-        thread_id = i;
+        pthread_t thread_id;
         pthread_create(&thread_id, NULL, average_grade, i);
         pthread_cancel(thread_id);
     }
 
-    thread_id = number_of_groups;
+    pthread_t thread_id;
     pthread_create(&thread_id, NULL, full_average, NULL);
-    pthread_join(thread_id, NULL);
+//    pthread_join(thread_id, NULL);
     pthread_cancel(thread_id);
     return 0;
 }
