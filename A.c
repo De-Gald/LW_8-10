@@ -45,17 +45,17 @@ int main() {
         close(fd);
         close(fd2);
 
-        fd2 = open("B >> A", O_WRONLY);
-        fd = open("C >> A", O_WRONLY);
-        if (A == C) {
-            write(fd, &positive, sizeof positive);
-            write(fd2, &positive_C, sizeof positive_C);
-        } else {
-            write(fd, &negative, sizeof negative);
-            write(fd2, &negative_C, sizeof negative_C);
-        }
-        close(fd);
-        close(fd2);
+//         fd2 = open("B >> A", O_WRONLY);
+//         fd = open("C >> A", O_WRONLY);
+//         if (A == C) {
+//             write(fd, &positive, sizeof positive);
+//             write(fd2, &positive_C, sizeof positive_C);
+//         } else {
+//             write(fd, &negative, sizeof negative);
+//             write(fd2, &negative_C, sizeof negative_C);
+//         }
+//         close(fd);
+//         close(fd2);
 
         i--;
     }
