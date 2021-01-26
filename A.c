@@ -45,7 +45,7 @@ int main() {
         close(fd);
         close(fd2);
         
-        sleep(1);
+        usleep(1000);
 
         fd2 = open("B >> A", O_WRONLY);
         fd = open("C >> A", O_WRONLY);
