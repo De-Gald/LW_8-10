@@ -3,6 +3,7 @@
 #include <string.h>
 #include <unistd.h>
 #include <signal.h>
+#include <sys/wait.h>
 
 char line[64];
 int array[sizeof line][sizeof line] = {0};
