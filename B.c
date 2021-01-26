@@ -6,7 +6,7 @@ int main() {
     int i = 15;
     int fd;
     int B;
-    char result[32];
+    char result[256];
 
     while (i > 0) {
         fd = open("B >> A", O_WRONLY);

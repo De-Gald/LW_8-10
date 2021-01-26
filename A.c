@@ -10,12 +10,12 @@ int main() {
     int fd, fd2;
     int i = 15;
 
-    char positive[32] = "Correct guess";
-    char negative[32] = "Wrong guess";
-    char positive_B[32] = "B was right";
-    char negative_B[32] = "B was wrong";
-    char positive_C[32] = "C was right";
-    char negative_C[32] = "C was wrong";
+    char positive[256] = "Correct guess";
+    char negative[256] = "Wrong guess";
+    char positive_B[256] = "B was right";
+    char negative_B[256] = "B was wrong";
+    char positive_C[256] = "C was right";
+    char negative_C[256] = "C was wrong";
 
     mkfifo("B >> A", S_IFIFO | 0666);
     mkfifo("C >> A", S_IFIFO | 0666);
